@@ -1,0 +1,55 @@
+#:include tab_dash.kv
+#:include tab_form.kv
+#:include tab_about.kv
+#:import Snackbar kivymd.uix.snackbar.Snackbar
+
+
+MDTabs:
+    id: tabku
+    TabDash:
+        id: tab_dash
+        text: "Dashboard"
+    TabForm:
+        id: tab_form
+        text: "Form"
+    TabAbout:
+        id: tab_about
+        text: "About"
+
+
+
+#ScrollView:
+#    do_scroll_y: True
+#    do_scroll_x: False
+#    MDBoxLayout:
+#        adaptive_height: True
+#        orientation: "vertical"
+#        padding: "10dp"
+#        spacing: "10dp"
+#        MDLabel:
+#            size_hint_y: None
+#            height: self.texture_size[1]
+#            text: "Daily Monitoring Physical Distancing\nPerhutani - Divre Jawa Timur"
+#            halign: "center"
+#            font_style: "H6"
+#        MDTextFieldRect:
+#            id: nama
+#            hint_text: "NAMA LENGKAP"
+#            multiline: False
+#            size_hint_y: None
+#            height: "35dp"
+#            padding: [5, (self.height-self.line_height)/2]
+#            on_text: app.auto_nama()
+#        MDTextFieldRect:
+#            id: npk
+#            hint_text: "NOMOR POKOK KARYAWAN"
+#            multiline: False
+#            size_hint_y: None
+#            height: "35dp"
+#            padding: [5, (self.height-self.line_height)/2]
+#            on_text: app.auto_npk()
+#        MDDropDownItem:
+#            pos_hint: {'center_x': .5, 'center_y': .5}
+#            size_hint_x: .8
+#            text: 'PHW II MADIUN'
+##            on_release: self.set_item("New Item")

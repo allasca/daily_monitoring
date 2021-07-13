@@ -1,0 +1,33 @@
+
+<Labelku@MDLabel>:
+    size_hint_y: None
+    height: self.texture_size[1]
+
+<TabAbout>:
+    do_scroll_x: False
+    do_scroll_y: True
+	MDBoxLayout:
+		orientation: "vertical"
+		MDGridLayout:
+			adaptive_height: False
+			cols: 1
+			padding: "10dp"
+			spacing: "10dp"
+			Labelku:
+				text: "Cara penggunaan"
+				halign: "center"
+				font_style: "H6"
+			Labelku:
+				text: "1. Isi semua form pada tab Form"
+			Labelku:
+				text: "2. Simpan form untuk kepentingan mendatang"
+			Labelku:
+				text: "3. Cek status apakah form dibuka atau ditutup di tab Dashboard"
+			Labelku:
+				text: "4. Jika form dibuka, bisa mengirim form yang telah disimpan"
+			Labelku:
+				text: "5. Untuk hari berikutnya jika tidak ada berubahan data maka bisa langsung kirim form dengan cek status terlebih dahulu"
+		Widget:
+		MDLabel:
+			halign: "center"
+			text: "Daily Monitoring Divisi Regional Jawa Timur\nVersion 2.0.0\n(c)allasca 2021\n"

@@ -1,0 +1,58 @@
+
+
+<TabDash>:
+    do_scroll_x: False
+    do_scroll_y: True
+    MDBoxLayout:
+        adaptive_height: True
+        orientation: "vertical"
+        padding: "10dp"
+        spacing: "10dp"
+        MDLabel:
+            id: judul
+            text: "Cek Status Dahulu"
+            font_style: "H6"
+            size_hint_y: None
+            height: self.texture_size[1]
+            halign: "center"
+        MDSeparator:
+            height: "5dp"
+        MDLabel:
+            text: "Cek status terlebih dahulu"
+            halign: "center"
+            size_hint_y: None
+            height: self.texture_size[1]
+            id: status
+        MDRaisedButton:
+            text: "Cek status"
+            pos_hint: {"center_x": .5}
+            on_release:
+                status.text = "Loading..."
+                app.cek_status_form()
+        MDSeparator:
+            height: "5dp"
+        MDLabel:
+            id: log
+            halign: "center"
+            font_style: "H6"
+            size_hint_y: None
+            height: self.texture_size[1]
+        MDRaisedButton:
+            text: "Kirim form data"
+            pos_hint: {"center_x": .5}
+            on_press:
+                app.save_cfg()
+                kirim_log.text = "Mengirim data form..."
+            on_release:
+                app.kirim_form()
+        MDRaisedButton:
+            text: "Kirim form data menggunakan browser"
+            pos_hint: {"center_x": .5}
+            on_release: app.kirim_web()
+        MDSeparator:
+        MDLabel:
+            markup: True
+            text: "Log"
+            size_hint_y: None
+            height: self.texture_size[1]
+            id: kirim_log

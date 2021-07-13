@@ -1,0 +1,248 @@
+
+
+
+
+
+<TabForm>:
+    do_scroll_x: False
+    do_scroll_y: True
+    MDGridLayout:
+        adaptive_height: True
+        cols: 1
+        row_default_height: "35dp"
+        row_force_default: False
+        padding: "10dp"
+        MDLabel:
+            text: "Nama Lengkap"
+        MDTextFieldRect:
+            id: nama_lengkap
+            multiline: False
+            padding: [5, (self.height-self.line_height)/2]
+            on_text: app.auto_upper(self)
+        MDLabel:
+            text: "Nomor Pokok Karyawan"
+        MDTextFieldRect:
+            id: NPK
+            multiline: False
+            padding: [5, (self.height-self.line_height)/2]
+            on_text: app.auto_upper(self)
+        MDLabel:
+            text: "Unit Organisasi"
+        MDTextFieldRect:
+            text: "Devisi Regional Jawa Timur"
+            multiline: False
+            padding: [5, (self.height-self.line_height)/2]
+            on_text: app.auto_upper(self)
+            disabled: True
+        MDLabel:
+            text: "Satuan unit organisasi"
+        Spinner:
+            id: satuan_unit
+            size_hint_y: None
+            height: "48dp"
+            values: "KBM Eco Tourism", "KBM Industri Hasil Hutan", "KBM Industri Sagu Papua", "KBM Penjualan", "KPH Banyuwangi Barat", "KPH Banyuwangi Selatan", "KPH Banyuwangi Utara", "KPH Blitar", "KPH Bojonegoro", "KPH Bondowoso", "KPH Jatirogo", "KPH Jember", "KPH Jombang", "KPH Kediri", "KPH Lawu Ds", "KPH Madiun", "KPH Madura", "KPH Malang", "KPH Mojokerto", "KPH Nganjuk", "KPH Ngawi", "KPH Saradan", "KPH Padangan", "KPH Parengan", "KPH Pasuruan", "KPH Probolinggo", "KPH Tuban", "PHW I Bojonegoro", "PHW II Madiun", "PHW III Jombang", "PHW IV Malang", "PHW V Jember"
+
+
+        MDLabel:
+            text: "Jenjang jabatan"
+        Spinner:
+            id: jenjang_jabatan
+            size_hint_y: None
+            height: "48dp"
+            values: 'Jenjang II (IIA & IIB)', 'Jenjang III (IIIA & IIIB)', 'Jenjang IV', 'Jenjang V', 'Jenjang VI dan VII','PKWT (kontrak)', 'Outsourcing'
+
+        MDLabel:
+            text: "Jabatan"
+        MDTextFieldRect:
+            id: jabatan
+            multiline: False
+            padding: [5, (self.height-self.line_height)/2]
+            on_text: app.auto_upper(self)
+        MDLabel:
+            text: "Karakteristik jabatan"
+        Spinner:
+            id: karakteristik_jabatan
+            size_hint_y: None
+            height: "48dp"
+            values: 'Administrasi/Kantor', 'Pabrik', 'Lapangan'
+
+        MDLabel:
+            text: "Saat ini Saudara melaksanakan tugas di"
+        Spinner:
+            id: tugas_di
+            size_hint_y: None
+            height: "48dp"
+            values: 'Bekerja di Kantor', 'Bekerja di Lapangan/Pabrik', 'Work From Home (WFH)/kerja dari rumah', 'Tugas Dinas Luar/Perjalanan Dinas', 'Cuti (cuti sakit/ cuti tahunan/ cuti besar/cuti alasan penting)'
+
+        MDLabel:
+            text: "Bagaimana kondisi kesehatan Saudara?"
+        Spinner:
+            id: kondisi_kesehatan
+            size_hint_y: None
+            height: "48dp"
+            values: "SEHAT", "Demam >38 Derajat", "Batuk berdahak", "Batuk kering", "Flu/Pilek", "Sesak Nafas", "Sakit Tenggorokan/Radang tenggorakan", "Sakit Kepala/Pusing", "Asam Lambung/Magh", "Kolesterol Tinggi", "Tekanan Darah Rendah", "Tekanan Darah tinggi", "Sakit Gigi", "Diare/Gangguan pencernaan lain", "Thypus", "Orang Dalam Pemantauan (ODP) Covid-19", "Pasien Dalam Pengawasan (PDP) Covid-19", "Positif Covid-19"
+
+        MDLabel:
+            text: "Bagaimana kondisi kesehatan Keluarga Saudara?"
+        Spinner:
+            id: kondisi_kesehatan_keluarga
+            size_hint_y: None
+            height: "48dp"
+            values: "SEHAT", "Demam >38 Derajat", "Batuk berdahak", "Batuk kering", "Flu/Pilek", "Sesak Nafas", "Sakit Tenggorokan/Radang tenggorakan", "Sakit Kepala/Pusing", "Asam Lambung/Magh", "Kolesterol Tinggi", "Tekanan Darah Rendah", "Tekanan Darah tinggi", "Sakit Gigi", "Diare/Gangguan pencernaan lain", "Thypus", "Orang Dalam Pemantauan (ODP) Covid-19", "Pasien Dalam Pengawasan (PDP) Covid-19", "Positif Covid-19"
+
+        MDLabel:
+            text: "Lingkungan ada yang ODP/PDP/Positif Covid-19?"
+        Spinner:
+            id: lingkungan_ditetapkan
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak", "Tidak tahu"
+        MDLabel:
+            text: "Apakah protokol pencegahan dijalankan?"
+        Spinner:
+            id: protokol_pencegahan
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya, sudah", "Tidak, Belum"
+        MDLabel:
+            text: "Apakah protokol yang belum dijalankan?"
+        Spinner:
+            id: protokol_yang_belum
+            size_hint_y: None
+            height: "48dp"
+            values: "Rapid/swab test karyawan", "Pemberian APD secara konsisten dan sesuai kebutuhan", "Desinfektan tempat kerja rutin", "Sterilisasi alat - alat kerja/produksi", "Himbauan atau informasi terkini terkait dengan covid-19", "Pengukuran suhu pada akses pintu masuk kantor", "Pemberian suplemen/vitamin bagi yang bekerja di lapangan/pabrik dan shifting kantor"
+
+        MDLabel:
+            text: "Apakah sudah mengisi DANI?"
+        Spinner:
+            id: absen_dani
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Mendapatkan tugas dari atasan hari ini?"
+        Spinner:
+            id: tugas_atasan
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Menanyakan tugas hari ini kepada atasan?"
+        Spinner:
+            id: tanya_tugas
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Tugas ditetapkan target penyelesaiannya?"
+        Spinner:
+            id: target_penyelesaian
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Dapat menyelesaikan target pekerjaan hari ini?"
+        Spinner:
+            id: menyelesaikan_target
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Atasan Saudara memonitor pekerjaan?"
+        Spinner:
+            id: atasan_memonitor
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Atasan memberikan arahan target pekerjaan?"
+        Spinner:
+            id: atasan_arahan
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Tahu target yang harus Saudara capai hari ini?"
+        Spinner:
+            id: target_dicapai
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Manajemen sudah melakukan Sosialisasi perubahan budaya?"
+        Spinner:
+            id: sosialisasi_budaya
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Perasaan hari ini?"
+        Spinner:
+            id: perasaan
+            size_hint_y: None
+            height: "48dp"
+            values: "Happy", "Lelah/Letih", "Sedih", "Marah", "Was-was/Cemas"
+        MDLabel:
+            text: "Apakah dengan WFH pekerjaan dapat selesai sesuai rencana?"
+        Spinner:
+            id: wfh_rencana
+            size_hint_y: None
+            height: "48dp"
+            values: "Ya", "Tidak"
+        MDLabel:
+            text: "Bagaimana cara menerapkan physcal distancing?"
+        MDTextFieldRect:
+            id: cara_protokol
+            multiline: False
+            padding: [5, (self.height-self.line_height)/2]
+            on_text: app.auto_upper(self)
+        MDLabel:
+            text: "APD yang sudah tersedia?"
+        MDBoxLayout:
+            adaptive_height: True
+            MDList:
+                id: list_list
+                OneLineRightIconListItem:
+                    text: "Masker"
+                    IconRightSampleWidget:
+                        id: tersedia_masker
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+                OneLineRightIconListItem:
+                    text: "Hand sanitizer"
+                    IconRightSampleWidget:
+                        id: tersedia_hand
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+                OneLineRightIconListItem:
+                    text: "Sarung tangan"
+                    IconRightSampleWidget:
+                        id: tersedia_sarung
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+                OneLineRightIconListItem:
+                    text: "Penutup rambut"
+                    IconRightSampleWidget:
+                        id: tersedia_rambut
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+                OneLineRightIconListItem:
+                    text: "Tissue"
+                    IconRightSampleWidget:
+                        id: tersedia_tissue
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+                OneLineRightIconListItem:
+                    text: "Sabun cuci tangan"
+                    IconRightSampleWidget:
+                        id: tersedia_sabun
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+                OneLineRightIconListItem:
+                    text: "APD sudah lengkap semua"
+                    IconRightSampleWidget:
+                        id: tersedia_lengkap
+                        on_active: app.list_tersedia(self, self.parent.parent.text)
+        MDRaisedButton:
+            text: " S I M P A N  F O R M "
+            pos_hint: {"center_x": .5}
+            on_press:
+                Snackbar(text="Form telah disimpan").show()
+            on_release:
+                app.save_cfg()
+
+
