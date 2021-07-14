@@ -253,7 +253,7 @@
             text: " S I M P A N  F O R M "
             pos_hint: {"center_x": .5}
             on_press:
-                Snackbar(text="Form telah disimpan").show()
+                Snackbar(text="Form telah disimpan").open()
             on_release:
                 app.save_cfg()
 
